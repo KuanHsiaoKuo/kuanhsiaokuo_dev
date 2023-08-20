@@ -34,7 +34,8 @@ jobs:
       - run: sudo sh scripts/install_plantuml.sh
       - run: mdbook build
 
-      - uses: JamesIves/github-pages-deploy-action@4.1.7
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: book # The folder the action should deploy.
