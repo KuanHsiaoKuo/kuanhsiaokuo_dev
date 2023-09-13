@@ -1,5 +1,8 @@
 # From Local to Cloud: Revolutionizing File Operations Across Languages
 
+<!--ts-->
+<!--te-->
+
 ## **Executive Summary**
 
 In today's vast landscape of filesystems, the need for a unified developer experience is more pressing than ever. As
