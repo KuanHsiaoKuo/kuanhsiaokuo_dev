@@ -96,13 +96,13 @@ To understand s3fs, we must first acknowledge that it is a splendid testament to
 pyfilesystem2. By building atop pyfilesystem2's foundational principles, s3fs manages to encapsulate the complexities of
 AWS S3 into an approachable, Pythonic interface.
 
-### **3.1.1. The Challenge of AWS S3**
+#### **3.1.1. The Challenge of AWS S3**
 
 AWS S3, with its distributed nature, eventual consistency, and object storage paradigm, presents a unique set of
 challenges. Traditional file operations, when mapped directly to S3, can become cumbersome due to the nuances of object
 storage—like the absence of real directories and the intricacies of handling large files.
 
-### **3.1.2. s3fs: A Seamless Transition**
+#### **3.1.2. s3fs: A Seamless Transition**
 
 Enter s3fs. By harnessing the core tenets of pyfilesystem2, s3fs allows developers to work with S3 as if it were a local
 filesystem. The magic lies in its ability to abstract away S3's quirks and present a standardized interface. For
@@ -114,19 +114,19 @@ TypeScript's flexible typing—having such an interface in Python is like a brea
 While s3fs’s charm lies in its simplicity, understanding its inner workings can provide a deeper appreciation and more
 effective utilization.
 
-### **3.2.1. The Power of Abstraction**
+#### **3.2.1. The Power of Abstraction**
 
 At the heart of s3fs lies the power of abstraction that pyfilesystem2 champions. The same methods that apply to local
 file systems—like opening, reading, or writing—apply equally to S3 when using s3fs. This ensures that, as developers,
 our mental model remains consistent, irrespective of the underlying storage mechanism.
 
-### **3.2.2. Specifics & Optimizations**
+#### **3.2.2. Specifics & Optimizations**
 
 However, a one-size-fits-all approach could be limiting, especially considering the optimizations that S3-specific
 operations might necessitate. Thankfully, s3fs strikes a delicate balance. It provides avenues to tap into S3-specific
 features, such as multi-part uploads or fine-grained ACLs, without deviating from the universal interface philosophy.
 
-### **3.2.3. A Multi-language Perspective**
+#### **3.2.3. A Multi-language Perspective**
 
 From a polyglot developer's perspective, the s3fs approach mirrors the interface-driven designs we see in languages like
 Rust or Go. Just as Rust's traits or Go's interfaces allow us to define consistent behaviors across diverse types, s3fs
@@ -190,8 +190,7 @@ S3.**
 
 ## 5. **Real-world Application Scenarios**
 
-**1. Dockerized Deployment Without Volume Mounts: Redefining Docker Deployment Strategies with Virtual Storage
-Experiences**
+### 5.1. Dockerized Deployment Without Volume Mounts: Redefining Docker Deployment Strategies with Virtual Storage Experiences
 
 Traditional Docker deployments often rely on volume mounts to persist data beyond a container's lifecycle. This
 practice, although functional, can sometimes lead to intricacies, especially in complex multi-container setups. With the
@@ -296,8 +295,8 @@ if __name__ == "__main__":
 
 ```
 
-**2. Kubernetes (K8s) Storage Abstraction: A Seamless Filesystem Experience for Each Pod, Irrespective of the Storage
-Solution in Play**
+### 5.2. Kubernetes (K8s) Storage Abstraction: A Seamless Filesystem Experience for Each Pod, Irrespective of the Storage
+Solution in Play
 
 Kubernetes has transformed how applications are orchestrated and scaled in a clustered environment. Storage, however,
 remains a nuanced challenge. Pods, ephemeral by nature, demand persistent and consistent storage solutions. By
@@ -384,7 +383,7 @@ spec:
 
 ```
 
-**3. Multi-cloud Deployment: Achieving Storage Backend Interchangeability Across Major Cloud Service Providers**
+### 5.3. Multi-cloud Deployment: Achieving Storage Backend Interchangeability Across Major Cloud Service Providers
 
 The multi-cloud strategy is becoming more of a necessity than a luxury. Businesses spread their resources across AWS,
 Azure, Google Cloud, and others for resilience and optimized costs. However, each cloud provider has its proprietary
@@ -484,7 +483,7 @@ if __name__ == "__main__":
     print(f"File {test_path} deleted!")
 ```
 
-**4. Data Pipeline Abstraction: Streamlining Data Access and Storage in Big Data and ML Workflows**
+### 5.4. Data Pipeline Abstraction: Streamlining Data Access and Storage in Big Data and ML Workflows
 
 In the realms of Big Data and Machine Learning, data access, processing, and storage often form intricate pipelines.
 Different stages might demand different storage solutions — from high-speed local SSDs for computation to cloud-based
@@ -578,6 +577,8 @@ if __name__ == "__main__":
 ## **6. Rolling Up the Sleeves: Crafting a Ceph Experience**
 
 ### **6.1. A Primer on the Ceph Filesystem**
+
+![](https://docs.ceph.com/en/latest/_images/cephfs-architecture.svg)
 
 Ceph, a unified, distributed storage system, is designed for performance, reliability, and scalability. It provides
 three types of storage in a single cluster: object, block, and file storage. At the core of Ceph's design lies its
@@ -785,16 +786,19 @@ In this example:
 
 This is a simplified example; in a real-world scenario, you'll need to handle these complexities in greater detail.
 
-### **6.3. Step-by-Step Walkthrough: Bridging Python's Class Inheritance with Interface Implementation in TypeScript,
+### **6.3. Step-by-Step Walkthrough: Bridging Python's Class Inheritance with Interface Implementation in TypeScript, Golang, and Rust**
 
-Golang, and Rust**
-
+```extended-markdown-table
 | Aspect / Language  | Python (with pyfilesystem2)                                                                 | TypeScript                                                                                | Golang                                                                                                           | Rust                                                                                    |
 |--------------------|---------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | **Core Mechanism** | Class Inheritance                                                                           | Interfaces                                                                                | Interfaces                                                                                                       | Traits                                                                                  |
+|--------------------|---------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | **Description**    | Inherits from base classes and overrides methods for specific operations.                   | Defines an interface with expected operations, then implements it.                        | Defines an interface with method signatures, then creates structs to implement these.                            | Defines a trait for operations and then implements it for specific types or structs.    |
+|--------------------|---------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | **Strengths**      | Seamless integration with a broader ecosystem. Ability to extend and modify parent classes. | Strong type safety, aligns well with object-oriented patterns, clear contract definition. | Strong static typing, clear distinction between interface and implementation, implicit interface implementation. | Strong type system, ownership semantics, and ability to apply traits to existing types. |
+|--------------------|---------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | **Sample Usage**   | `Code example: See As Below`                                                                | `Code example: See As Below`                                                              | `Code example: See As Below`                                                                                     | `Code example: See As Below`                                                            |
+```
 
 #### **Python's Approach with pyfilesystem2 for Ceph:**
 
@@ -1619,8 +1623,7 @@ presented by pyfilesystem2 has the potential to ripple across the broader develo
 
 ## **9. References**
 
-1. [**Unified Filesystems in Modern Development
-   **](https://www.oreilly.com/radar/an-introduction-to-modern-file-systems/)
+1. [An Introduction to Filesystems | Delphix](https://www.delphix.com/blog/introduction-to-filesystems)
 
    A general introduction to the evolution and intricacies of modern filesystems.
 
