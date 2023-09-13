@@ -230,7 +230,36 @@ others on their coding journeys, just as I have been inspired and empowered on m
 <p><strong>Best regards,</strong><br />
 <em>KuanHsiaokuo</em></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="about-me"><a class="header" href="#about-me">About Me</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="from-local-to-cloud-revolutionizing-file-operations-across-languages"><a class="header" href="#from-local-to-cloud-revolutionizing-file-operations-across-languages">From Local to Cloud: Revolutionizing File Operations Across Languages</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><style>.extended-markdown-table {
+    display: grid;
+}
+
+.extended-markdown-table > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 20px;
+    border-bottom: 1px solid var(--table-border-color);
+    border-right: 1px solid var(--table-border-color);
+}
+
+.extended-markdown-table > div.extended-markdown-left-border {
+    border-left: 1px solid var(--table-border-color);
+}
+
+.extended-markdown-table > div.extended-markdown-header {
+    text-align: center;
+    background: var(--table-header-bg);
+    border-bottom: 1px solid var(--table-header-bg);
+    border-right: 1px solid var(--table-header-bg);
+    font-weight: bold;
+}
+
+.extended-markdown-table > div.extended-markdown-header.extended-markdown-left-border {
+    border-left: 1px solid var(--table-header-bg);
+}
+</style>
+<h1 id="from-local-to-cloud-revolutionizing-file-operations-across-languages"><a class="header" href="#from-local-to-cloud-revolutionizing-file-operations-across-languages">From Local to Cloud: Revolutionizing File Operations Across Languages</a></h1>
 <h2 id="executive-summary"><a class="header" href="#executive-summary"><strong>Executive Summary</strong></a></h2>
 <p>In today’s vast landscape of filesystems, the need for a unified developer experience is more pressing than ever. As
 technologies continue to evolve, so too do the complexities and intricacies of how developers interact with storage
@@ -303,11 +332,11 @@ for a consistent, straightforward, and unified file operation experience.</p>
 <p>To understand s3fs, we must first acknowledge that it is a splendid testament to the power and flexibility of
 pyfilesystem2. By building atop pyfilesystem2’s foundational principles, s3fs manages to encapsulate the complexities of
 AWS S3 into an approachable, Pythonic interface.</p>
-<h3 id="311-the-challenge-of-aws-s3"><a class="header" href="#311-the-challenge-of-aws-s3"><strong>3.1.1. The Challenge of AWS S3</strong></a></h3>
+<h4 id="311-the-challenge-of-aws-s3"><a class="header" href="#311-the-challenge-of-aws-s3"><strong>3.1.1. The Challenge of AWS S3</strong></a></h4>
 <p>AWS S3, with its distributed nature, eventual consistency, and object storage paradigm, presents a unique set of
 challenges. Traditional file operations, when mapped directly to S3, can become cumbersome due to the nuances of object
 storage—like the absence of real directories and the intricacies of handling large files.</p>
-<h3 id="312-s3fs-a-seamless-transition"><a class="header" href="#312-s3fs-a-seamless-transition"><strong>3.1.2. s3fs: A Seamless Transition</strong></a></h3>
+<h4 id="312-s3fs-a-seamless-transition"><a class="header" href="#312-s3fs-a-seamless-transition"><strong>3.1.2. s3fs: A Seamless Transition</strong></a></h4>
 <p>Enter s3fs. By harnessing the core tenets of pyfilesystem2, s3fs allows developers to work with S3 as if it were a local
 filesystem. The magic lies in its ability to abstract away S3’s quirks and present a standardized interface. For
 developers juggling multiple languages—be it Rust’s stringent type system, Go’s straightforward approach, or
@@ -315,15 +344,15 @@ TypeScript’s flexible typing—having such an interface in Python is like a br
 <h3 id="32-the-anatomy-of-the-interface"><a class="header" href="#32-the-anatomy-of-the-interface"><strong>3.2. The Anatomy of the Interface</strong></a></h3>
 <p>While s3fs’s charm lies in its simplicity, understanding its inner workings can provide a deeper appreciation and more
 effective utilization.</p>
-<h3 id="321-the-power-of-abstraction"><a class="header" href="#321-the-power-of-abstraction"><strong>3.2.1. The Power of Abstraction</strong></a></h3>
+<h4 id="321-the-power-of-abstraction"><a class="header" href="#321-the-power-of-abstraction"><strong>3.2.1. The Power of Abstraction</strong></a></h4>
 <p>At the heart of s3fs lies the power of abstraction that pyfilesystem2 champions. The same methods that apply to local
 file systems—like opening, reading, or writing—apply equally to S3 when using s3fs. This ensures that, as developers,
 our mental model remains consistent, irrespective of the underlying storage mechanism.</p>
-<h3 id="322-specifics--optimizations"><a class="header" href="#322-specifics--optimizations"><strong>3.2.2. Specifics &amp; Optimizations</strong></a></h3>
+<h4 id="322-specifics--optimizations"><a class="header" href="#322-specifics--optimizations"><strong>3.2.2. Specifics &amp; Optimizations</strong></a></h4>
 <p>However, a one-size-fits-all approach could be limiting, especially considering the optimizations that S3-specific
 operations might necessitate. Thankfully, s3fs strikes a delicate balance. It provides avenues to tap into S3-specific
 features, such as multi-part uploads or fine-grained ACLs, without deviating from the universal interface philosophy.</p>
-<h3 id="323-a-multi-language-perspective"><a class="header" href="#323-a-multi-language-perspective"><strong>3.2.3. A Multi-language Perspective</strong></a></h3>
+<h4 id="323-a-multi-language-perspective"><a class="header" href="#323-a-multi-language-perspective"><strong>3.2.3. A Multi-language Perspective</strong></a></h4>
 <p>From a polyglot developer’s perspective, the s3fs approach mirrors the interface-driven designs we see in languages like
 Rust or Go. Just as Rust’s traits or Go’s interfaces allow us to define consistent behaviors across diverse types, s3fs
 provides a consistent filesystem behavior across diverse storage solutions. This universality becomes instrumental in
@@ -371,8 +400,7 @@ rigors of Rust, the flexibility of TypeScript, and the simplicity of Go, s3fs in
 <p><strong>Code example: Demonstrating how s3fs offers a unified developer experience, abstracting away the complexities of AWS
 S3.</strong></p>
 <h2 id="5-real-world-application-scenarios"><a class="header" href="#5-real-world-application-scenarios">5. <strong>Real-world Application Scenarios</strong></a></h2>
-<p><strong>1. Dockerized Deployment Without Volume Mounts: Redefining Docker Deployment Strategies with Virtual Storage
-Experiences</strong></p>
+<h3 id="51-dockerized-deployment-without-volume-mounts-redefining-docker-deployment-strategies-with-virtual-storage-experiences"><a class="header" href="#51-dockerized-deployment-without-volume-mounts-redefining-docker-deployment-strategies-with-virtual-storage-experiences">5.1. Dockerized Deployment Without Volume Mounts: Redefining Docker Deployment Strategies with Virtual Storage Experiences</a></h3>
 <p>Traditional Docker deployments often rely on volume mounts to persist data beyond a container’s lifecycle. This
 practice, although functional, can sometimes lead to intricacies, especially in complex multi-container setups. With the
 advent of pyfilesystem2 and similar paradigms, we can shift towards a model where virtual storage replaces traditional
@@ -471,8 +499,8 @@ if __name__ == &quot;__main__&quot;:
     print(f&quot;File {test_path} deleted!&quot;)
 
 </code></pre>
-<p><strong>2. Kubernetes (K8s) Storage Abstraction: A Seamless Filesystem Experience for Each Pod, Irrespective of the Storage
-Solution in Play</strong></p>
+<h3 id="52-kubernetes-k8s-storage-abstraction-a-seamless-filesystem-experience-for-each-pod-irrespective-of-the-storage"><a class="header" href="#52-kubernetes-k8s-storage-abstraction-a-seamless-filesystem-experience-for-each-pod-irrespective-of-the-storage">5.2. Kubernetes (K8s) Storage Abstraction: A Seamless Filesystem Experience for Each Pod, Irrespective of the Storage</a></h3>
+<p>Solution in Play</p>
 <p>Kubernetes has transformed how applications are orchestrated and scaled in a clustered environment. Storage, however,
 remains a nuanced challenge. Pods, ephemeral by nature, demand persistent and consistent storage solutions. By
 leveraging pyfilesystem2’s principles, one can abstract the underlying storage solution, offering a uniform filesystem
@@ -553,7 +581,7 @@ spec:
                   key: S3_KEY_SECRET
 
 </code></pre>
-<p><strong>3. Multi-cloud Deployment: Achieving Storage Backend Interchangeability Across Major Cloud Service Providers</strong></p>
+<h3 id="53-multi-cloud-deployment-achieving-storage-backend-interchangeability-across-major-cloud-service-providers"><a class="header" href="#53-multi-cloud-deployment-achieving-storage-backend-interchangeability-across-major-cloud-service-providers">5.3. Multi-cloud Deployment: Achieving Storage Backend Interchangeability Across Major Cloud Service Providers</a></h3>
 <p>The multi-cloud strategy is becoming more of a necessity than a luxury. Businesses spread their resources across AWS,
 Azure, Google Cloud, and others for resilience and optimized costs. However, each cloud provider has its proprietary
 storage solution, leading to potential inconsistencies in filesystem operations.</p>
@@ -647,7 +675,7 @@ if __name__ == &quot;__main__&quot;:
     manager.delete_file(test_path)
     print(f&quot;File {test_path} deleted!&quot;)
 </code></pre>
-<p><strong>4. Data Pipeline Abstraction: Streamlining Data Access and Storage in Big Data and ML Workflows</strong></p>
+<h3 id="54-data-pipeline-abstraction-streamlining-data-access-and-storage-in-big-data-and-ml-workflows"><a class="header" href="#54-data-pipeline-abstraction-streamlining-data-access-and-storage-in-big-data-and-ml-workflows">5.4. Data Pipeline Abstraction: Streamlining Data Access and Storage in Big Data and ML Workflows</a></h3>
 <p>In the realms of Big Data and Machine Learning, data access, processing, and storage often form intricate pipelines.
 Different stages might demand different storage solutions — from high-speed local SSDs for computation to cloud-based
 solutions for long-term archival.</p>
@@ -737,6 +765,7 @@ if __name__ == &quot;__main__&quot;:
 </ol>
 <h2 id="6-rolling-up-the-sleeves-crafting-a-ceph-experience"><a class="header" href="#6-rolling-up-the-sleeves-crafting-a-ceph-experience"><strong>6. Rolling Up the Sleeves: Crafting a Ceph Experience</strong></a></h2>
 <h3 id="61-a-primer-on-the-ceph-filesystem"><a class="header" href="#61-a-primer-on-the-ceph-filesystem"><strong>6.1. A Primer on the Ceph Filesystem</strong></a></h3>
+<p><img src="https://docs.ceph.com/en/latest/_images/cephfs-architecture.svg" alt="" /></p>
 <p>Ceph, a unified, distributed storage system, is designed for performance, reliability, and scalability. It provides
 three types of storage in a single cluster: object, block, and file storage. At the core of Ceph’s design lies its
 ability to distribute data, manage data replication, and provide fault tolerance. For developers familiar with diverse
@@ -940,14 +969,8 @@ operations, such as eventual consistency.</p>
 </li>
 </ol>
 <p>This is a simplified example; in a real-world scenario, you’ll need to handle these complexities in greater detail.</p>
-<h3 id="63-step-by-step-walkthrough-bridging-pythons-class-inheritance-with-interface-implementation-in-typescript"><a class="header" href="#63-step-by-step-walkthrough-bridging-pythons-class-inheritance-with-interface-implementation-in-typescript">**6.3. Step-by-Step Walkthrough: Bridging Python’s Class Inheritance with Interface Implementation in TypeScript,</a></h3>
-<p>Golang, and Rust**</p>
-<p>|Aspect / Language|Python (with pyfilesystem2)|TypeScript|Golang|Rust|
-|-----------------|---------------------------|----------|------|----|
-|<strong>Core Mechanism</strong>|Class Inheritance|Interfaces|Interfaces|Traits|
-|<strong>Description</strong>|Inherits from base classes and overrides methods for specific operations.|Defines an interface with expected operations, then implements it.|Defines an interface with method signatures, then creates structs to implement these.|Defines a trait for operations and then implements it for specific types or structs.|
-|<strong>Strengths</strong>|Seamless integration with a broader ecosystem. Ability to extend and modify parent classes.|Strong type safety, aligns well with object-oriented patterns, clear contract definition.|Strong static typing, clear distinction between interface and implementation, implicit interface implementation.|Strong type system, ownership semantics, and ability to apply traits to existing types.|
-|<strong>Sample Usage</strong>|<code>Code example: See As Below</code>|<code>Code example: See As Below</code>|<code>Code example: See As Below</code>|<code>Code example: See As Below</code>|</p>
+<h3 id="63-step-by-step-walkthrough-bridging-pythons-class-inheritance-with-interface-implementation-in-typescript-golang-and-rust"><a class="header" href="#63-step-by-step-walkthrough-bridging-pythons-class-inheritance-with-interface-implementation-in-typescript-golang-and-rust"><strong>6.3. Step-by-Step Walkthrough: Bridging Python’s Class Inheritance with Interface Implementation in TypeScript, Golang, and Rust</strong></a></h3>
+<div class="extended-markdown-table"><div class="extended-markdown-header extended-markdown-left-border" style="grid-column-start: 1; grid-column-end: 2; grid-row-start: 1; grid-row-end: 2">Aspect / Language</div><div class="extended-markdown-header" style="grid-column-start: 2; grid-column-end: 3; grid-row-start: 1; grid-row-end: 2">Python (with pyfilesystem2)</div><div class="extended-markdown-header" style="grid-column-start: 3; grid-column-end: 4; grid-row-start: 1; grid-row-end: 2">TypeScript</div><div class="extended-markdown-header" style="grid-column-start: 4; grid-column-end: 5; grid-row-start: 1; grid-row-end: 2">Golang</div><div class="extended-markdown-header" style="grid-column-start: 5; grid-column-end: 6; grid-row-start: 1; grid-row-end: 2">Rust</div><div class="extended-markdown-left-border" style="grid-column-start: 1; grid-column-end: 2; grid-row-start: 2; grid-row-end: 3">**Core Mechanism**</div><div class="" style="grid-column-start: 2; grid-column-end: 3; grid-row-start: 2; grid-row-end: 3">Class Inheritance</div><div class="" style="grid-column-start: 3; grid-column-end: 4; grid-row-start: 2; grid-row-end: 3">Interfaces</div><div class="" style="grid-column-start: 4; grid-column-end: 5; grid-row-start: 2; grid-row-end: 3">Interfaces</div><div class="" style="grid-column-start: 5; grid-column-end: 6; grid-row-start: 2; grid-row-end: 3">Traits</div><div class="extended-markdown-left-border" style="grid-column-start: 1; grid-column-end: 2; grid-row-start: 3; grid-row-end: 4">**Description**</div><div class="" style="grid-column-start: 2; grid-column-end: 3; grid-row-start: 3; grid-row-end: 4">Inherits from base classes and overrides methods for specific operations.</div><div class="" style="grid-column-start: 3; grid-column-end: 4; grid-row-start: 3; grid-row-end: 4">Defines an interface with expected operations, then implements it.</div><div class="" style="grid-column-start: 4; grid-column-end: 5; grid-row-start: 3; grid-row-end: 4">Defines an interface with method signatures, then creates structs to implement these.</div><div class="" style="grid-column-start: 5; grid-column-end: 6; grid-row-start: 3; grid-row-end: 4">Defines a trait for operations and then implements it for specific types or structs.</div><div class="extended-markdown-left-border" style="grid-column-start: 1; grid-column-end: 2; grid-row-start: 4; grid-row-end: 5">**Strengths**</div><div class="" style="grid-column-start: 2; grid-column-end: 3; grid-row-start: 4; grid-row-end: 5">Seamless integration with a broader ecosystem. Ability to extend and modify parent classes.</div><div class="" style="grid-column-start: 3; grid-column-end: 4; grid-row-start: 4; grid-row-end: 5">Strong type safety, aligns well with object-oriented patterns, clear contract definition.</div><div class="" style="grid-column-start: 4; grid-column-end: 5; grid-row-start: 4; grid-row-end: 5">Strong static typing, clear distinction between interface and implementation, implicit interface implementation.</div><div class="" style="grid-column-start: 5; grid-column-end: 6; grid-row-start: 4; grid-row-end: 5">Strong type system, ownership semantics, and ability to apply traits to existing types.</div><div class="extended-markdown-left-border" style="grid-column-start: 1; grid-column-end: 2; grid-row-start: 5; grid-row-end: 6">**Sample Usage**</div><div class="" style="grid-column-start: 2; grid-column-end: 3; grid-row-start: 5; grid-row-end: 6">`Code example: See As Below`</div><div class="" style="grid-column-start: 3; grid-column-end: 4; grid-row-start: 5; grid-row-end: 6">`Code example: See As Below`</div><div class="" style="grid-column-start: 4; grid-column-end: 5; grid-row-start: 5; grid-row-end: 6">`Code example: See As Below`</div><div class="" style="grid-column-start: 5; grid-column-end: 6; grid-row-start: 5; grid-row-end: 6">`Code example: See As Below`</div></div>
 <h4 id="pythons-approach-with-pyfilesystem2-for-ceph"><a class="header" href="#pythons-approach-with-pyfilesystem2-for-ceph"><strong>Python’s Approach with pyfilesystem2 for Ceph:</strong></a></h4>
 <ol>
 <li>Start with inheriting from pyfilesystem2’s base classes.</li>
@@ -1695,8 +1718,7 @@ one language’s library could inform and inspire improvements in another.</p>
 <h2 id="9-references"><a class="header" href="#9-references"><strong>9. References</strong></a></h2>
 <ol>
 <li>
-<p><a href="https://www.oreilly.com/radar/an-introduction-to-modern-file-systems/">**Unified Filesystems in Modern Development
-**</a></p>
+<p><a href="https://www.delphix.com/blog/introduction-to-filesystems">An Introduction to Filesystems | Delphix</a></p>
 <p>A general introduction to the evolution and intricacies of modern filesystems.</p>
 </li>
 <li>
